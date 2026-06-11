@@ -1,132 +1,117 @@
 @import url("style/header.css");
-
-:root {
-    /* Corrigido o nome de laranja para verde, já que o valor é verde */
-    --verde-claro: #14da8e; 
-    --verde-medio: #64c095;
-    --verde-escuro: #2c744a;
+:root{
+ --laranja-claro: #14da8e;
     --preto: #000000;
     --branco: #FFFFFF; 
 }
 
-/* Reset básico e mais seguro */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* --- Cabeçalho --- */
 .cabecalho {
     background-color: #06df9e;
-    color: var(--branco);
+    color:var(--branco);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px 0;
 }
 
-.cabecalho-imagem {
+.cabecalho-imagem{
     width: 15%;
     margin: 0 10px;
 }
 
-.cabecalho-lista-item {
+.cabecalho-lista-item{
     display: inline-block;
     margin: 0 10px;
     font-size: 24px;
 }
 
-/* --- Seção Agro --- */
-.agro {
-    background-image: linear-gradient(var(--verde-medio), var(--verde-escuro));
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 0;
-}
-
-.agro-imagem {
+.agro-imagem{
     width: 25%;
     margin: 10px;
 }
 
-.agro-div-conteudo {
+.agro{
+    background-image: linear-gradient(#64c095,#2c744a);
+    color:var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.agro-div-conteudo{
     width: 35%;
     padding: 14px 0;
     margin: 10px;
 }
-
-.agro-titulo {
+.agro-titulo{
     padding: 24px 0;
 }
-
-/* --- Contato e Rodapé --- */
-.contato {
-    background-image: linear-gradient(var(--verde-medio), var(--verde-escuro));
-    color: var(--branco);
+.contato{
+  background-image: linear-gradient(#64c095,#2c744a);
+    color:var(--branco);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 14px 0;
 }
 
-.rodape {
-    background-color: var(--preto);
+.rodape{
+    background-color:var(--preto);
     text-align: center;
 }
 
-.rodape-imagem {
+.rodape-imagem{
     height: 60px;
     padding: 12px 0;
+   
 }
 
-/* --- Menu de Acessibilidade --- */
-.menu-acessibilidade {
+
+.menu-acessibilidade{
     position: fixed;
-    top: 2rem;
-    right: 20px;
+    top:2rem;
+    right:20px;
     z-index: 1000;
 }
 
-.rotacao-botao {
+.rotacao-botao{
     transform: rotate(-90deg);
     transform-origin: right center;
 }
 
-.opcoes-acessibilidade {
-    margin-top: 10px;
+.opcoes-acessibilidade{
+    margin-top:10px;
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Substitui o margin-bottom individual dos botões */
 }
 
-.apresenta-lista {
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+
+.apresenta-lista{
     display: none;
 }
 
-/* --- Modo Alto Contraste --- */
 .alto-contraste {
-    background-color: var(--preto) !important;
-    color: var(--branco) !important;
+    background-color: var(--preto);
+    color: var(--branco);
 }
 
-/* Força fundo preto e texto branco nas seções principais */
 .alto-contraste .cabecalho,
 .alto-contraste .rodape,
-.alto-contraste .agro,
-.alto-contraste .contato {
-    background-color: var(--preto) !important;
-    background-image: none; /* Remove os gradientes no modo escuro */
-    color: var(--branco) !important;
+.alto-contraste .agro {
+    background-color: var(--preto);
+    color: var(--branco);
 }
-
-/* Botões ganham destaque com a cor verde-clara e texto preto */
 .alto-contraste .botao-inicio,
-.alto-contraste .btn-primary,
-.alto-contraste .opcoes-acessibilidade button {
-    background-color: var(--verde-claro) !important;
-    color: var(--preto) !important;
-    border: 1px solid var(--branco);
+.alto-contraste .btn-primary {
+    background-color: var(--laranja-claro);
+    color: var(--preto);
 }
